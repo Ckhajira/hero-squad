@@ -14,8 +14,14 @@ public class HeroTest {
     @After
     public void tearDown() throws Exception {
     }
-    @Test
+
     public Hero setupNewHero() {
     return new Hero("Turi", 22, "He was struck with radi and became the leader  of his mbogi", "spinning with yennx", "broke boi", 6);
   }
+
+   @Test
+    public void HeroInstantiatesWithName_true() throws Exception {
+   Hero hero = setupNewHero();
+    assertEquals("Turi", hero.getName());
+ }
 }
