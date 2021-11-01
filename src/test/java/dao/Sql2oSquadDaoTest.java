@@ -1,3 +1,4 @@
+/*
 package dao;
 
 import models.Hero;
@@ -115,3 +116,4 @@ public static void setUp() throws Exception {
   }
 
 }
+*/

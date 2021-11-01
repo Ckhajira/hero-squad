@@ -1,0 +1,1 @@
+web: ./build/install/hero-collab/bin/hero-collab

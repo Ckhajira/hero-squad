@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{#block "title"}}Hero Collab{{/block}}</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<ul class="flex-top nav bg-success">
+    <div class="flex-inside">
+        <a href="/"><img src="https://cdn.pixabay.com/photo/2019/06/17/22/21/flash-4281077__340.png" >Heroes Collab</a>
+
+    </div>
+    <li class="flex-second" role="presentation"><a href="/heroes/new">Add a New Hero</a></li>
+
+    <li role="presentation" class="dropdown flex-second">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Hero-Clans<span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            {{#if squads}}
+                {{#each squads}}
+                    <li><a href="/squads/{{id}}">{{name}}</a></li>
+                {{/each}}
+                <li><a href="/squads/new">Add a Squad</a></li>
+            {{else}}
+                <li><a href="/squads/new">Add a Squad</a></li>
+            {{/if}}
+        </ul>
+    </li>
+
+</ul>
+<div class="container-fluid main-text">
+    <!--begin main template-->
+
+
+
+    <div class="col-md-12">
+        {{#block "content"}}
+        {{/block}}
+
+    </div>
+</div>
+<!--end main template-->
+{{#block "footer"}}
+    <footer class="footer">
+        <div class="container">
+            <hr>
+            <p class="text-muted" style="text-align:center;">
+                <a href="/squads/delete">Delete all Squads & Heroes</a><br>
+                <a href="/heroes/delete">Delete all Heroes</a>
+
+            </p>
+        </div>
+    </footer>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </html>
+{{/block}}

@@ -1,3 +1,4 @@
+/*
 package dao;
 
 import models.Hero;
@@ -111,3 +112,4 @@ import static org.junit.Assert.*;
  }
 }
 
+*/

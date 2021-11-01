@@ -28,7 +28,10 @@ public class App {
 //      ":~/hero-samurai.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
         //  String connectionString ="jdbc:postgresql://ec2-174-129-27-3.compute-1.amazonaws.com:5432/devp9q46hvbdon";
         //     String connectionString = "jdbc:h2:~/hero-samurai.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
+     //  String connectionString = ""
         Sql2o sql2o = new Sql2o(connectionString, "moringa", "Access");
+     //String connectionString = "jdbc:postgresql://ec2-18-210-95-55.compute-1.amazonaws.com:5432/dfqnldk0dgnub7";
+       // Sql2o sql2o = new Sql2o(connectionString, "hhhqarpmdqalex", "30af53701fab91f42b15ef3f9a97f492338d776cbecb5af058a992d22266eea9");
         Sql2oHeroDao heroDao = new Sql2oHeroDao(sql2o);
         Sql2oSquadDao squadDao = new Sql2oSquadDao(sql2o);
         Map<String,Object> model = new HashMap<>();

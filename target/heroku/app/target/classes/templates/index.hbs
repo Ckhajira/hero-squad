@@ -1,0 +1,25 @@
+{{#partial "content"}}
+    <div class="warriors">
+        <img src="https://cdn.pixabay.com/photo/2021/04/20/03/40/captain-america-6192855__340.png">
+        <img src="https://cdn.pixabay.com/photo/2021/04/20/03/42/thor-6192858__340.png">
+        <img src="https://cdn.pixabay.com/photo/2021/04/22/22/06/iron-man-6200313__340.png">
+        <img src="https://cdn.pixabay.com/photo/2021/04/29/14/23/vision-6216730__340.png">
+        <img src="https://cdn.pixabay.com/photo/2021/02/04/18/40/batman-5982258__340.png">
+        <img src="https://cdn.pixabay.com/photo/2021/04/20/03/40/scarlet-witch-6192856__340.png">
+
+
+    </div>
+    <h1 style="font-weight:700"> Heroes List</h1>
+
+    {{#if heroes}}
+        {{#each heroes }}
+            <ul class="list-flex">
+            <li ><a href="/squads/{{squad_id}}/heroes/{{id}}">{{name}}</a></li>
+            </ul>
+        {{/each}}
+    {{else}}
+        <p>No heroes!</p>
+    {{/if}}
+{{/partial}}
+
+{{> layout.hbs}}
